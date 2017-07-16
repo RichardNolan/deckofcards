@@ -4,8 +4,7 @@
   "description": "Unofficial javascript interface for deckofcardsapi.com",
   "main": "index.js",
   "directories": {
-    "example": "example",
-    "lib": "lib"
+    "example": "example"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,6 +21,13 @@
   },
   "homepage": "https://github.com/RichardNolan/deckofcards#readme",
   "devDependencies": {
-    "webpack": "^3.2.0"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "gh-pages": "^1.0.0",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2"
   }
 }

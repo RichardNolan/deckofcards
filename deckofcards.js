@@ -1,5 +1,6 @@
 'use strict';
 
+
 class Deck {
     constructor(){       
         this.details={};
@@ -53,7 +54,7 @@ class Deck {
                 return Error("Error retrieving data from api")
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
@@ -102,7 +103,7 @@ class Deck {
                 return Error("Error retrieving data from api")
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
@@ -138,7 +139,7 @@ class Deck {
                 return Error("Error retrieving data from api")
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
@@ -191,7 +192,7 @@ class Deck {
                 return Error("Error retrieving data from api")
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
@@ -201,26 +202,26 @@ class Deck {
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    // METHOD discard()
-    //      discards a card or list of cards (codes) that have been drawn from the deck
-    // PARAMETERS:
-    //      cards: string
-    //          a string of card codes to discard
-    //      pile: string
-    //          a name for the discard pile, this allows for multiple discard piles. Default is discard
-    // RETURNS:
-    //      Returns a promise upon completition of the api call containing a single JSON object
-    //      which is replicated in the Deck instance under Deck.details.
-    //              {
-    //                  deck_id:"pf64vhddltjv",
-    //                  remaining:52,
-    //                  piles:{
-    //                      PILE_NAME:{
-    //                          remaining:1
-    //                      }
-    //                  }
-    //                  success:true
-    //              }
+    METHOD discard()
+         discards a card or list of cards (codes) that have been drawn from the deck
+    PARAMETERS:
+         cards: string
+             a string of card codes to discard
+         pile: string
+             a name for the discard pile, this allows for multiple discard piles. Default is discard
+    RETURNS:
+         Returns a promise upon completition of the api call containing a single JSON object
+         which is replicated in the Deck instance under Deck.details.
+                 {
+                     deck_id:"pf64vhddltjv",
+                     remaining:52,
+                     piles:{
+                         PILE_NAME:{
+                             remaining:1
+                         }
+                     }
+                     success:true
+                 }
     /////////////////////////////////////////////////////////////////////////////////////////////
     discard(cards, pile=deck.defaults.pile){
         // https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S      
@@ -240,7 +241,7 @@ class Deck {
                 return Error("Error retrieving data from api")
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
@@ -296,10 +297,9 @@ class Deck {
                 return {}
             }            
         })
-        .catch(function (error) {
+        .catch(error=> {
             console.log(error);
         });
     }
 
 }
-

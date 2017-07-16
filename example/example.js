@@ -1,11 +1,13 @@
-var deck = new Deck();
 
-const play = ()=>{
+const deck = new Deck();
+deck.get().then(()=>{
+
     document.getElementById('draw').addEventListener('click', drawEvent);
     document.getElementById('draw2').addEventListener('click', (e)=>drawEvent(e,2));
     document.getElementById('draw5').addEventListener('click', (e)=>drawEvent(e,5));
     document.getElementById('drawDiscard').addEventListener('click', drawDiscardEvent);
-    // console.log(deck.details);
+    
+
     
     deck.shuffle().then(res=>{console.log(res)})
     deck.draw()
@@ -45,8 +47,4 @@ const play = ()=>{
         });
    }
     
-}
-
-deck.get().then(play);
-// deck.getPartial().then(play);
-// deck.get().then(res=>console.log(res))
+});
