@@ -1,4 +1,4 @@
-##Deck of Cards
+## Deck of Cards
 This is an an unofficial deck of cards libary for the fantastic [deckofcardsapi](http://www.deckofcardsapi.com).
 
 The only dependency is [axios](https://github.com/mzabriskie/axios) which is used for the api calls, but this could easily be swapped out for Jquery, fetch or any other ajax libary.
@@ -6,7 +6,7 @@ The only dependency is [axios](https://github.com/mzabriskie/axios) which is use
 It is written in ES2015 javascipt. 
 
 
-##Usage
+## Usage
 1. include deckofcards.js as a script in the head of your page
 
 ```
@@ -35,7 +35,7 @@ deck.get().then(()=>{
 });
 ```
 
-##API Reference
+## API Reference
 - get
 ```
     METHOD get()
